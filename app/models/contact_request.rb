@@ -3,7 +3,7 @@ class ContactRequest
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  attr_accessor :name, :email, :message
+  attr_accessor :name, :email, :message, :additional_field
 
   validates :name, :email, :message, :presence => true
 
@@ -19,5 +19,9 @@ class ContactRequest
 
   def persisted?
     false
+  end
+
+  def spam?
+    additional_field.present?
   end
 end
