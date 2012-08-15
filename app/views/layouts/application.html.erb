@@ -192,18 +192,15 @@
 
       </div>
       <div class="eight columns">
-      <form method="post" action="send.php" id="contactform">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" class="required" />
-
-        <label for="email">Email:</label>
-        <input type="text" name="email" id="email" class="required email"/>
-
-        <label for="message">Message:</label>
-        <textarea name="message" id="message" class="required"></textarea>
-
-        <button type="submit" name="submit" value="Submit" class="submit-button">Send message</button>
-      </form>
+      <%= form_for @contact_request, :url => contact_path, :html => {:id => 'contactform'}, :remote => true do |f| %>
+        <%= f.label :name, "Name:" %>
+        <%= f.text_field :name, :class => "required"%>
+        <%= f.label :email, "Email:" %>
+        <%= f.text_field :email, :class => "required email"%>
+        <%= f.label :message, "Message:" %>
+        <%= f.text_area :message, :class => "required", :cols => nil, :rows => nil %>
+        <%= f.button "Send Message", :class => "submit-button"%>
+      <% end %>
       </div>
 
     </div>
