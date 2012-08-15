@@ -1,6 +1,6 @@
 UrbanhafnerCom::Application.routes.draw do
-  get "pages/index"
 
+  resource :contact, :only => [:create, :new]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
