@@ -24,13 +24,20 @@ $(document).ready(function(){
     // Navigation
     $("#content").easytabs({
       animate     : true,
-      updateHash    : false,
+      updateHash    : true,
       transitionIn  :'slideDown',
       transitionOut :'slideUp',
       animationSpeed  :400,
       tabs      :"> .header > div > ul > li",
       tabActiveClass  :'active',
       defaultTab    :"li#default",
+    });
+
+    // Logging tab clicks
+    $('#content').on("easytabs:after", function() {
+      if (location.hash != "") {
+        clicky.log(location.hash);
+      }
     });
 
     // Blog expand
@@ -41,12 +48,9 @@ $(document).ready(function(){
     // Contact form validation
     $("#contactform").validate();
 
-});
+    // Updating send button before ajax request
+    $('#contactform').bind('ajax:before', function() {
+      $('#contactform .submit-button').html("Sending ...")
+    })
 
-
-$(document).ready(function() {
-
-  $('#contactform').bind('ajax:before', function() {
-    $('#contactform .submit-button').html("Sending ...")
-  })
 });
