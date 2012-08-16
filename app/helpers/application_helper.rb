@@ -1,5 +1,5 @@
 module ApplicationHelper
-  
+
   def copyright_years
     start = 2012
     this_year = Date.today.year
@@ -9,4 +9,5 @@ module ApplicationHelper
       "#{start}"
     end
   end
+
 end
