@@ -200,6 +200,50 @@ button.facebook:before {
     background:url(<%= asset_path 'facebook.png' %>) no-repeat center;
 }
 
+/* Xing */
+button.xing {
+  color:#fff;
+  background:#015a60;
+  background:-moz-linear-gradient(0% 100% 90deg, #015a60, #036f6c);
+  background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#036f6c), to(#015a60));
+  border:1px solid #003e4f;
+  border-bottom:5px solid #003e4f;
+  -moz-box-shadow:inset 0 0 0 1px #0c8971, 0 1px 2px 0  rgba(0,0,0,0.2);
+  -webkit-box-shadow:inset 0 0 0 1px #0c8971, 0 1px 2px 0  rgba(0,0,0,0.2);
+  -webkit-background-clip:padding-box;
+  height:37px;
+  padding-left:40px;
+  text-align:left;
+  width:100%;
+}
+
+button.xing:hover {
+  background:#0fa3c8;
+  background:-moz-linear-gradient(0% 100% 90deg, #036f6c, #015a60);
+  background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#015a60), to(#036f6c));
+}
+
+button.xing:active {
+  border-bottom:1px solid #003e4f;
+  height:32px;
+  margin-top:5px;
+}
+
+button.xing:before {
+  content:"";
+  width:32px;
+  max-height:32px;
+  height:100%;
+  position:absolute;
+  display:block;
+  top:0px;
+  left:0px;
+  border-right:solid 1px rgba(255,255,255,0.2);
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+  background:url(<%= asset_path 'xing.png' %>) no-repeat center;
+}
+
 /* LinkedIn */
 button.linkedin {
     color:#fff;

@@ -1,8 +1,9 @@
 <!doctype html>
 <head>
   <meta charset="utf-8">
-  <title>Your title</title>
-  <meta name="description" content="Description for your site">
+  <title>Urban Hafner - Ruby on Rails and JavaScript freelance developer</title>
+  <meta name="description" content="Ruby on Rails and JavaScript freelancer">
+  <meta name="keywords" content="ruby, rails, ruby on rails, javascript, freelance, freelancer, developer">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -18,7 +19,7 @@
   <div class="header">
     <div class="logo">
       <a href="/">
-        <h2>FIRST<strong>LAST</strong></h2>
+        <h2>Urban<strong>Hafner</strong></h2>
       </a>
     </div>
     <div class="menubutton"></div>
@@ -26,8 +27,8 @@
     <div class="menu">
       <ul>
         <li id="default"><a href="#homepage">Home</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <!-- <li><a href="#blog">Blog</a></li> -->
+        <!-- <li><a href="#resume">Resume</a></li> -->
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -47,18 +48,25 @@
       </div>
 
       <div class="five columns">
-        <h1>YOUR JOB/SLOGAN</h1>
-        <p><strong>Bold intro text</strong></p>
-        <p>More intro text</p>
+        <h1>WEB DEVELOPER</h1>
+        <p><strong>
+          My name is Urban Hafner and I'm a web developer specializing
+          in Ruby, Ruby on Rails and JavaScript.
+        </strong></p>
+        <p>
+          If you are looking for help with your web application please
+          contact me by either using the
+          <a class="contact-form-link" href="#contact">contact form</a>
+          or any of the means mention on the right.
+        </p>
       </div>
 
       <div class="four columns">
         <div class="left-divider">
-          <p>Text above your social buttons<p>
-          <a href="link to your twitter"><button class="twitter">@yourname</button></a>
-          <a href="link to your facebook"><button class="facebook">Your Name</button></a>
-          <a href="link to your linkedin"><button class="linkedin">Your Name</button></a>
-          <a href="mailto:you@youremail.com"><button class="mail">you@youremail.com</button></a>
+          <a href="http://twitter.com/ujh"><button class="twitter">@ujh</button></a>
+          <a href="http://www.linkedin.com/pub/urban-hafner/53/b4b/6ab"><button class="linkedin">Urban Hafner</button></a>
+          <a href="https://www.xing.com/profile/Urban_Hafner"><button class="xing">Urban Hafner</button></a>
+          <a href="mailto:contact@urbanhafner.com"><button class="mail">contact@urbanhafner.com</button></a>
         </div>
       </div>
 
@@ -68,7 +76,7 @@
 
 
   <!-- BLOG -->
-  <div class="wrapper blog" id="blog">
+  <!-- <div class="wrapper blog" id="blog">
     <span class="big-text">blog</span>
     <div class="container">
 
@@ -91,11 +99,11 @@
         </div>
 
    </div>
-  </div>
+  </div> -->
 
 
   <!-- RESUME -->
-  <div class="wrapper resume" id="resume">
+  <!-- <div class="wrapper resume" id="resume">
     <span class="big-text">resume</span>
     <div class="container">
 
@@ -144,7 +152,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- CONTACT -->
@@ -157,10 +165,10 @@
       <div class="four columns">
         <h5>Contact info</h5>
         <ul>
-          <li><strong>Name:</strong> Your name</li>
-          <li><strong>Address:</strong> Your address</li>
-          <li><strong>E-mail:</strong> you@youremail</li>
-          <li><strong>Phone:</strong> Your phone number</li>
+          <li><strong>Name: </strong>Urban Hafner</li>
+          <li><strong>Address: </strong><br />1 place Notre Dame<br />38000 Grenoble<br />France</li>
+          <li><strong>E-mail: </strong>contact@urbanhafner.com</li>
+          <li><strong>Phone: </strong>+33 6 30 39 23 84</li>
         </ul>
 
       </div>
@@ -184,12 +192,15 @@
 
   <!-- FOOTER -->
   <div class="footer">
-    Copyright 2012 Your name
+    Copyright <%= copyright_years %> Urban Hafner
   </div>
 
 </div>
 
-
+<script type="text/javascript">
+  var clicky_custom = {};
+  clicky_custom.cookies_disable = 1;
+</script>
 <script src="//static.getclicky.com/js" type="text/javascript"></script>
 <script type="text/javascript">try{ clicky.init(66628862); }catch(e){}</script>
 <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66628862ns.gif" /></p></noscript>

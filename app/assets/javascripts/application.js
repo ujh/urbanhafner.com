@@ -54,4 +54,8 @@ $(document).ready(function(){
       $('#contactform .submit-button').html("Sending ...")
     })
 
+    $('.contact-form-link').click(function(event) {
+      event.preventDefault();
+      $("#content").easytabs('select', '#contact')
+    })
 });
