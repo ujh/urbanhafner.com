@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
   <meta charset="utf-8">
-  <title>Urban Hafner - Ruby on Rails and JavaScript freelance developer</title>
+  <title><%= title %></title>
   <meta name="description" content="Ruby on Rails and JavaScript freelancer">
   <meta name="keywords" content="ruby, rails, ruby on rails, javascript, freelance, freelancer, developer">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
@@ -26,10 +26,10 @@
 
     <div class="menu">
       <ul>
-        <%= menu_item "Home", root_path %>
-        <%= menu_item "Projects", projects_path %>
-        <%= menu_item "Resume", resume_path %>
-        <%= menu_item "Contact", contact_path %>
+        <%= menu_item "Home" %>
+        <%= menu_item "Projects" %>
+        <%= menu_item "Resume" %>
+        <%= menu_item "Contact" %>
       </ul>
     </div>
 
