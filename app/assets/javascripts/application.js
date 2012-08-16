@@ -20,42 +20,4 @@ $(document).ready(function(){
     $(".menubutton").click(function() {
       $(".menu").toggleClass("activemenu");
     });
-
-    // Navigation
-    $("#content").easytabs({
-      animate     : true,
-      updateHash    : true,
-      transitionIn  :'slideDown',
-      transitionOut :'slideUp',
-      animationSpeed  :400,
-      tabs      :"> .header > div > ul > li",
-      tabActiveClass  :'active',
-      defaultTab    :"li#default",
-    });
-
-    // Logging tab clicks
-    $('#content').on("easytabs:after", function() {
-      var h = location.hash
-      if (h != "") {
-        clicky.log(location.hash, $('[href='+h+']').text());
-      }
-    });
-
-    // Blog expand
-    $('.readmore').click(function() {
-        $(this).parent('.post').find('.more').toggle();
-    });
-
-    // Contact form validation
-    $("#contactform").validate();
-
-    // Updating send button before ajax request
-    $('#contactform').bind('ajax:before', function() {
-      $('#contactform .submit-button').html("Sending ...")
-    })
-
-    $('.contact-form-link').click(function(event) {
-      event.preventDefault();
-      $("#content").easytabs('select', '#contact')
-    })
 });

@@ -1,0 +1,33 @@
+<!-- CONTACT -->
+<div class="wrapper contact" id="contact">
+  <span class="big-text">contact</span>
+  <div class="container">
+    <div class="twelve columns">
+      <div class="map"><%= image_tag "yourcontactimage.jpg" %></div>
+    </div>
+    <div class="four columns">
+      <h5>Contact info</h5>
+      <ul>
+        <li><strong>Name: </strong>Urban Hafner</li>
+        <li><strong>Address: </strong><br />1 place Notre Dame<br />38000 Grenoble<br />France</li>
+        <li><strong>E-mail: </strong>contact@urbanhafner.com</li>
+        <li><strong>Phone: </strong>+33 6 30 39 23 84</li>
+      </ul>
+
+    </div>
+    <div class="eight columns">
+      <%= form_for @contact_request, :url => contact_path, :html => {:id => 'contactform'}, :remote => true do |f| %>
+        <div class="notice"></div>
+        <%= f.label :name, "Name:" %>
+        <%= f.text_field :name, :class => "required"%>
+        <%= f.label :email, "Email:" %>
+        <%= f.text_field :email, :class => "required email"%>
+        <%= f.label :message, "Message:" %>
+        <%= f.text_area :message, :class => "required", :cols => nil, :rows => nil %>
+        <%= f.button "Send Message", :class => "submit-button"%>
+        <%= f.text_field :additional_field %>
+      <% end %>
+    </div>
+
+  </div>
+</div>

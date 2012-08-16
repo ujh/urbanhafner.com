@@ -1,5 +1,10 @@
 UrbanhafnerCom::Application.routes.draw do
 
-  resource :contact, :only => [:create]
-  root :to => 'pages#index'
+  get "welcomes/show"
+
+  resource :contact,  :only => [:create, :show]
+  resource :resume,   :only => [:show]
+  resource :projects, :only => [:show]
+  resource :welcome,  :only => [:show]
+  root :to => 'welcomes#show'
 end

@@ -6,4 +6,8 @@ class ContactsController < ApplicationController
       Mailer.contact_request(contact_request).deliver
     end
   end
+
+  def show
+    @contact_request = ContactRequest.new
+  end
 end

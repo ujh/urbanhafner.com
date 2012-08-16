@@ -10,4 +10,10 @@ module ApplicationHelper
     end
   end
 
+  def menu_item(name, link)
+    l = link_to_unless_current(name, link) do
+      link_to name, link, :class => 'active'
+    end
+    "<li>#{l}</li>".html_safe
+  end
 end
