@@ -35,8 +35,9 @@ $(document).ready(function(){
 
     // Logging tab clicks
     $('#content').on("easytabs:after", function() {
-      if (location.hash != "") {
-        clicky.log(location.hash);
+      var h = location.hash
+      if (h != "") {
+        clicky.log(location.hash, $('[href='+h+']').text());
       }
     });
 
