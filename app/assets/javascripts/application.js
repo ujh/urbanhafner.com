@@ -50,3 +50,10 @@ $(document).ready(function(){
 
 });
 
+
+$(document).ready(function() {
+
+  $('#contactform').bind('ajax:before', function() {
+    $('#contactform .submit-button').html("Sending ...")
+  })
+});

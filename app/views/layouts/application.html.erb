@@ -192,16 +192,17 @@
 
       </div>
       <div class="eight columns">
-      <%= form_for @contact_request, :url => contact_path, :html => {:id => 'contactform'}, :remote => true do |f| %>
-        <%= f.label :name, "Name:" %>
-        <%= f.text_field :name, :class => "required"%>
-        <%= f.label :email, "Email:" %>
-        <%= f.text_field :email, :class => "required email"%>
-        <%= f.label :message, "Message:" %>
-        <%= f.text_area :message, :class => "required", :cols => nil, :rows => nil %>
-        <%= f.button "Send Message", :class => "submit-button"%>
-        <%= f.text_field :additional_field %>
-      <% end %>
+        <%= form_for @contact_request, :url => contact_path, :html => {:id => 'contactform'}, :remote => true do |f| %>
+          <div class="notice"></div>
+          <%= f.label :name, "Name:" %>
+          <%= f.text_field :name, :class => "required"%>
+          <%= f.label :email, "Email:" %>
+          <%= f.text_field :email, :class => "required email"%>
+          <%= f.label :message, "Message:" %>
+          <%= f.text_area :message, :class => "required", :cols => nil, :rows => nil %>
+          <%= f.button "Send Message", :class => "submit-button"%>
+          <%= f.text_field :additional_field %>
+        <% end %>
       </div>
 
     </div>
