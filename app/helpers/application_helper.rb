@@ -29,7 +29,8 @@ module ApplicationHelper
       "Home"     => root_path,
       "Projects" => projects_path,
       "Resume"   => resume_path,
-      "Contact"  => contact_path
+      "Contact"  => contact_path,
+      "Blog"     => blog_index_path
     }
   end
 end
