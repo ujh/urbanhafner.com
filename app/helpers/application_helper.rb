@@ -23,12 +23,11 @@ module ApplicationHelper
     end
     "<li>#{l}</li>".html_safe
   end
-  
+
   def pages
     {
       "Home"     => root_path,
       "Projects" => projects_path,
-      "Resume"   => resume_path,
       "Contact"  => contact_path,
       "Blog"     => blog_index_path
     }
