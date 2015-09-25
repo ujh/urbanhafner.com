@@ -1,23 +1,42 @@
 ---
 layout: default
 ---
+<!-- HOMEPAGE -->
+<div class="wrapper homepage" id="homepage">
+  <div class="container">
+    <div class="three columns">
+      <div class="frame">
+        <img src='/images/yourphoto.jpg'>
+      </div>
+    </div>
 
-<div class="home">
+    <div class="five columns">
+      <h1>WEB DEVELOPER</h1>
+      <p><strong>
+        My name is Urban Hafner and I'm a web developer specializing
+        in Ruby, Ruby on Rails and JavaScript.
+      </strong></p>
+      <p>
+        I do contract work and I can write your whole web app just starting with
+        a Photoshop design. But I am also more than happy to help you out with
+        your existing applications or join your team to work on your project.
+      </p>
+      <p>
+        If you are looking for help with your web application please
+        contact me by either using the
+        <%= link_to "contact form", contact_path %>
+        or any of the means mention on this page.
+      </p>
+    </div>
 
-  <h1 class="page-heading">Posts</h1>
+    <div class="four columns">
+      <div class="left-divider">
+        <a href="http://twitter.com/ujh"><button class="twitter">@ujh</button></a>
+        <a href="http://www.linkedin.com/pub/urban-hafner/53/b4b/6ab"><button class="linkedin">Urban Hafner</button></a>
+        <a href="https://www.xing.com/profile/Urban_Hafner"><button class="xing">Urban Hafner</button></a>
+        <a href="mailto:contact@urbanhafner.com"><button class="mail">contact@urbanhafner.com</button></a>
+      </div>
+    </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+ </div>
 </div>

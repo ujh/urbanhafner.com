@@ -1,20 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
   {% include head.html %}
 
   <body>
+<div id="content">
 
-    {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">
+      <a href="/">
+        <h2>Urban<strong>Hafner</strong></h2>
+      </a>
+    </div>
+    <div class="menubutton"></div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </div>
 
-    {% include footer.html %}
+    <br class="clear" />
+  </div>
 
-  </body>
+  {{ content }}
 
+  <!-- FOOTER -->
+  <div class="footer">
+    Copyright 2015 - 2015 Urban Hafner
+  </div>
+
+</div>
+
+{% include tracking.html %}
+
+</body>
 </html>
